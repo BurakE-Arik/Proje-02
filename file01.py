@@ -1,50 +1,28 @@
 # Fact Generator
-
-def nope_action():
-    global nope_counter
-    nope_counter = 0
-    real_answer = input("Do you REALLY want to quit ?? :")
-    
-    if real_answer.lower() == "yes":
-        print("Okay okay see you next time !")
-        return True
-    else:
-        print("YAY !")
-        return False
-
 def fact_generator():
-    while True:
-        answer = input("Do you want a FACT :")
-        if answer.lower() == "yes":
-            print("""
-                  987654321 
-                  ---------  = 8,0000000729000006633900060368491
-                  123456789\n""")
-        elif answer.lower() == "no":
-            print("WHY ???")
-            continue
-        elif answer.lower() == "nope":
-            print("AAAh Goodbye :)")
-            break
-        else:
-            print("NOPE!")
-            nope_counter += 1
-            
-            if nope_counter > 5:
-                if nope_action():
-                    break
-                else:
-                    continue
-            continue
+    """Take facts from json file and print"""
+    pass
+
                
 
+def main():
+    print("====FACT GENERATOR====")
+    
+    while True:
+        start_command = input("Do you want a fact? (y/n): ").strip().lower()
+        
+        if start_command not in ["y","n"]:
+            print("Please enter y or n")
+            continue
+        
+        if start_command == "n":
+            print("Goodbye!")
+            break
+
+        fact_generator()
 
 if __name__ == "__main__":
-    nope_counter = 0
-    print("========================")
-    print("    FACT GENERATOR")
-    print("=======say 'no' to close==========")
-    fact_generator()
+    main()
         
 # İhtiyaçlar;
     """Daha fazla fact içeren json dosyası
