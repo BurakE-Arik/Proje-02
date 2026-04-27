@@ -12,14 +12,7 @@ def nope_action():
         print("YAY !")
         return False
 
-            
-
-
-if __name__ == "__main__":
-    nope_counter = 0
-    print("========================")
-    print("    FACT GENERATOR")
-    print("=======say 'no' to close==========")
+def fact_generator():
     while True:
         answer = input("Do you want a FACT :")
         if answer.lower() == "yes":
@@ -43,7 +36,15 @@ if __name__ == "__main__":
                 else:
                     continue
             continue
-        
+               
+
+
+if __name__ == "__main__":
+    nope_counter = 0
+    print("========================")
+    print("    FACT GENERATOR")
+    print("=======say 'no' to close==========")
+    fact_generator()
         
 # İhtiyaçlar;
     """Daha fazla fact içeren json dosyası
